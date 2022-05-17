@@ -7,41 +7,35 @@ const carCtx = carCanvas.getContext('2d')
 const networkCtx = networkCanvas.getContext('2d')
 const road = new Road(carCanvas.width/2, carCanvas.width*0.9)
 
-const numberOfCars = 2000
+const numberOfCars = 500
 const cars = generateCars(numberOfCars)
 let bestCar = cars[0]
 
-// if(localStorage.getItem('bestBrain')){
-//     for(let i = 0; i < cars.length; i++){
-//         cars[i].brain = JSON.parse(
-//             localStorage.getItem('bestBrain'))
-//         if(i != 0) {
-//             NeuralNetwork.mutate(cars[i].brain, 0.1)
-//         }
-//     }
-// }
+if(localStorage.getItem('bestBrain')){
+    for(let i = 0; i < cars.length; i++){
+        cars[i].brain = JSON.parse(
+            localStorage.getItem('bestBrain'))
+        if(i != 0) {
+            NeuralNetwork.mutate(cars[i].brain, 0.1)
+        }
+    }
+}
 
 
-const trafficLength = 10
-let traffic=[
-    // new Car(road.getLaneCenter(1),-100,30,50,"DUMMY",2),
-    // new Car(road.getLaneCenter(0),-300,30,50,"DUMMY",2),
-    // new Car(road.getLaneCenter(2),-300,30,50,"DUMMY",2),
-    // new Car(road.getLaneCenter(0),-500,30,50,"DUMMY",2),
-    // new Car(road.getLaneCenter(1),-500,30,50,"DUMMY",2),
-    // new Car(road.getLaneCenter(1),-700,30,50,"DUMMY",2),
-    // new Car(road.getLaneCenter(2),-700,30,50,"DUMMY",2),
-]
+const trafficLength = 100
+let traffic = []
+
+console.log()
 
 for(let i = 0; i < trafficLength; i++) {
     traffic.push(new Car(road.getLaneCenter(
-        Math.floor((Math.random() * 3) + 1), // X
-        Math.floor((Math.random() * 3) + 1 * (i * -100)), // Y
+        Math.floor((Math.random() * 3))), // X
+        Math.floor((Math.random() * 3) + 1 * (i * -200)), // Y
         30, // Width
         50, // Length
         "DUMMY", // Control Type
         2 // Max Speed
-    )))
+    ))
 }
 
 
