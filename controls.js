@@ -10,7 +10,7 @@ class Controls{
             case 'PLAYER':
                 this.#addKeyboardListeners()
                 break
-            case "NPC":
+            case "DUMMY":
                 this.forward = true;
                 break
         }
