@@ -30,3 +30,7 @@ button:hover{
 #networkCanvas {
     background: black;
 }
+
+p{
+    text-align: center;
+}

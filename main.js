@@ -22,7 +22,7 @@ if(localStorage.getItem('bestBrain')){
 }
 
 
-const trafficLength = 100
+const trafficLength = 200
 let traffic = []
 
 console.log()
@@ -53,7 +53,7 @@ function discard() {
 function generateCars(n) {
     const cars = []
     for(let i = 1; i < n; i++) {
-        cars.push(new Car(road.getLaneCenter(1), 100, 30, 50, 'AI', 5))
+        cars.push(new Car(road.getLaneCenter(1), 100, 30, 50, 'AI', 10))
     }
     return cars
 }
