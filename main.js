@@ -39,7 +39,7 @@ for(let i = 0; i < trafficLength; i++) {
 }
 
 
-animate()
+
 
 function save() {
     localStorage.setItem('bestBrain',
@@ -97,3 +97,5 @@ function animate(time) {
     Visualizer.drawNetwork(networkCtx, bestCar.brain)
     requestAnimationFrame(animate)
 }
+
+animate()
