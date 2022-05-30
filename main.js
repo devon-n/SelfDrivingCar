@@ -53,7 +53,7 @@ function discard() {
 function generateCars(n) {
     const cars = []
     for(let i = 1; i < n; i++) {
-        cars.push(new Car(road.getLaneCenter(1), 100, 30, 50, 'AI', 10))
+        cars.push(new Car(road.getLaneCenter(1), 100, 30, 50, 'AI', 8))
     }
     return cars
 }
