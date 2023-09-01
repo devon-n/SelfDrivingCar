@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Self Driving Car JS</title>
-    <link rel="stylesheet" href="style.css" type="text/css">
-</head>
-<body>
-
-    
+    <link rel="stylesheet" href="style.css" type="text/css" />
+  </head>
+  <body>
     <canvas id="carCanvas"></canvas>
     <div id="verticalButtons">
-        <p>Click save to save <br/>
-            the brain. <br/> <br/>
-            Click repopulate to  <br/>
-            create a new population <br />
-            from the saved brain</p>
-        <button onclick="save()">Save</button>
-        <button onclick="window.location.reload()">Repopulate</button>
-        <button onclick="discard()">Discard</button>
+      <p>
+        Click save to save <br />
+        the brain. <br />
+        <br />
+        Click repopulate to <br />
+        create a new population <br />
+        from the saved brain
+      </p>
+      <button onclick="save()">Save</button>
+      <button onclick="window.location.reload()">Repopulate</button>
+      <button onclick="discard()">Discard</button>
     </div>
     <canvas id="networkCanvas"></canvas>
     <script src="visualizer.js"></script>
@@ -30,6 +31,5 @@
     <script src="controls.js"></script>
     <script src="car.js"></script>
     <script src="main.js"></script>
-    
-</body>
+  </body>
 </html>
