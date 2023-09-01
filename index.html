@@ -10,6 +10,7 @@
   <body>
     <canvas id="carCanvas"></canvas>
     <div id="verticalButtons">
+      <p>Cars left: <span id="CarsLeft"></span></p>
       <p>
         Click save to save <br />
         the brain. <br />
@@ -18,8 +19,7 @@
         create a new population <br />
         from the saved brain
       </p>
-      <button onclick="save()">Save</button>
-      <button onclick="window.location.reload()">Repopulate</button>
+      <button onclick="save()">Repopulate</button>
       <button onclick="discard()">Discard</button>
     </div>
     <canvas id="networkCanvas"></canvas>
